@@ -1,7 +1,21 @@
+
 ul li a{
     text-decoration: none;
     color : black;
     font-family: 'Quicksand';font-size: 22px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.img-fluid{
+  object-fit: cover;
 }
 
 ul li{
@@ -13,7 +27,6 @@ ul li{
 .title{
     margin-top: 100px;
     font-family: 'Kaushan Script', cursive;
-    font-size: 130px;
 }
   
   .animate {
@@ -70,5 +83,44 @@ ul li{
   transition: 0.5s; 
 }
 .product:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+.item{
+  text-decoration: none;
+}
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.col {
+  width: calc(100% - 320px);
+}
+
+.explore-btn{
+  transition: 0.5s;
+}
+.explore-btn:hover{
+  transform: scale(1.2);
 }
