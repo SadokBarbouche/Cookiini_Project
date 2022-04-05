@@ -1,4 +1,2 @@
-window.addEventListener("scroll",function(){
-    let header = document.querySelector("nav");
-    header.classList.toggle("sticky",window.scrollY>760);
-});
+let selected = document.title.toLowerCase();
+document.getElementById(selected).style.textDecoration = "underline";
