@@ -34,7 +34,7 @@ body {
 
 ul li {
   background-color: #EEEEEE;
-  width: 150px;
+  width: 100px;
   border-radius: 20px;
   text-align: center;
 }
@@ -84,6 +84,11 @@ ul li {
 }
 
 
+.card{
+  border-radius: 20px;
+}
+
+
 h1 {
   font-family: 'Quicksand';
   font-size: 22px;
@@ -97,7 +102,7 @@ h1 {
   transition: 0.5s;
 }
 
-.socialmedia:hover {
+.socialmedia::hover {
   transform: scale(1.1);
 }
 

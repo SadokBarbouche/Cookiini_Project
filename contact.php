@@ -13,11 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/community.css">
+    <style>
+        .card{
+            margin-bottom: 130px;
+        }
+    </style>
 
 </head>
 
 <?php
-include_once "header.php";
+    include_once "header.php";
 ?>
 
 <div class="container">
@@ -32,7 +37,7 @@ include_once "header.php";
         <div class="row gap-5">
             <div class="col-md card text-center">
                 <p class="fw-bold text-center my-3" style="color:#533E85">Customer Care</p>
-                <p class="text-center" style="color:#533E85">Our support team is ready to give you fast response.</p>
+                <p class="text-center" style="color:#533E85">Our support team is ready<br> to give you fast response.</p>
                 <center>
                     <button type="submit" class="btn btn w-25 rounded-pill" style="background-color: #533E85;color:white">Submit Request</button>
                 </center>
@@ -42,7 +47,7 @@ include_once "header.php";
             </div>
             <div class="col-md card">
                 <p class="fw-bold text-center my-3" style="color:#CE6A6B">Sales & Marketing</p>
-                <p class="text-center" style="color:#CE6A6B;">Our support team is ready to give you fast response.</p>
+                <p class="text-center" style="color:#CE6A6B;">Our support team is ready<br> to give you fast response.</p>
                 <center>
                     <button type="submit" class="btn w-25 rounded-pill" style="background-color: #CE6A6B;color:white">Submit Request</button>
                 </center>
@@ -54,10 +59,10 @@ include_once "header.php";
         </div>
     </div>
 </div>
-    <div class="container card">
+    <div class="container">
         
     </div>
-
+</div>
 <?php
 include_once "footer.php";
 ?>
