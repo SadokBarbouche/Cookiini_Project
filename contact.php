@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="icon" href="img/4 (3).png" type="image/gif" sizes="16x16">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +19,13 @@
         .card{
             margin-bottom: 130px;
         }
+        a{
+            transition: 0.5s;
+            text-decoration: none;
+        }
+        a:hover{
+            transform: scale(1.04);
+        }
     </style>
 
 </head>
@@ -25,7 +34,7 @@
     include_once "header.php";
 ?>
 
-<div class="container">
+<div class="container mt-md-5">
     <p class="text text-center display-4" style="color:#533E85">
         Contact Us
     </p>
@@ -34,16 +43,16 @@
         Have any questions? We’d love to hear from you
     </p>
     <div class="container">
-        <div class="row gap-5">
-            <div class="col-md card text-center">
+        <div class="row gap-3">
+            <div class="col-md card text-center ">
                 <p class="fw-bold text-center my-3" style="color:#533E85">Customer Care</p>
                 <p class="text-center" style="color:#533E85">Our support team is ready<br> to give you fast response.</p>
                 <center>
                     <button type="submit" class="btn btn w-25 rounded-pill" style="background-color: #533E85;color:white">Submit Request</button>
                 </center>
-                <p class="mt-5 text-center">
+                <a href="#" class="mt-5 text-center" style="color:#533E85">
                     Frequently Asked Questions 
-                </p>
+                </a>
             </div>
             <div class="col-md card">
                 <p class="fw-bold text-center my-3" style="color:#CE6A6B">Sales & Marketing</p>
@@ -51,9 +60,9 @@
                 <center>
                     <button type="submit" class="btn w-25 rounded-pill" style="background-color: #CE6A6B;color:white">Submit Request</button>
                 </center>
-                <p class="mt-5 text-center">
+                <a href="#" class="mt-5 text-center" style="color:#CE6A6B">
                     View Plans
-                </p>
+                </a>
             </div>
 
         </div>

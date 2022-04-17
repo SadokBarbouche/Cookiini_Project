@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+<link rel="icon" href="img/4 (3).png" type="image/gif" sizes="16x16">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,333 +14,186 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/meals.css">
     <style>
-        body {
-            background-color: #fbfbfb;
+        a{
+            display:block;
+        }
+        table {
+            border-spacing: 20px 30px;
         }
 
-        @media (min-width: 991.98px) {
-            main {
-                padding-left: 240px;
-            }
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
         }
 
-        /* Sidebar */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            padding: 58px 0 0;
-            /* Height of navbar */
-            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-            width: 240px;
-            z-index: 600;
+        .containerImg:hover .image {
+            opacity: 0.3;
         }
 
-        @media (max-width: 991.98px) {
-            .sidebar {
-                width: 100%;
-            }
+        .containerImg:hover .middle {
+            opacity: 1;
         }
 
-        .sidebar .active {
-            border-radius: 5px;
-            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        .text {
+            background-color: transparent;
+
         }
 
-        .sidebar-sticky {
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+
+        /* ..containerImg {
             position: relative;
-            top: 0;
-            height: calc(100vh - 48px);
-            padding-top: 0.5rem;
-            overflow-x: hidden;
-            overflow-y: auto;
-            /* Scrollable contents if viewport is shorter than content. */
+            width: 50%;
+        } */
+
+        select {
+            border-color: transparent;
+        }
+
+        p,
+        a {
+            color: #533e85;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input[type="text"] {
+            background: #faf0f0;
+            width: 50%;
+            display: inline-flex;
+        }
+
+        .card {
+            background-color: #faf0f0;
+        }
+
+        .card-img-top {
+            transition: 0.5s;
+        }
+
+
+
+        .sidemenuClicked {
+            visibility: hidden;
         }
     </style>
+
 </head>
 
 <?php
 include_once "header.php";
 ?>
+<div class="container">
+    <div class="row mt-5">
 
-<!--Main Navigation-->
-<header>
-  <!-- Sidebar -->
-  <nav
-       id="sidebarMenu"
-       class="collapse d-lg-block sidebar collapse bg-white"
-       >
-    <div class="position-sticky">
-      <div class="list-group list-group-flush mx-3 mt-4">
-        <!-- Collapse 1 -->
-        <a
-           class="list-group-item list-group-item-action py-2 ripple"
-           aria-current="true"
-           data-mdb-toggle="collapse"
-           href="#collapseExample1"
-           aria-expanded="true"
-           aria-controls="collapseExample1"
-           >
-          <i class="fas fa-tachometer-alt fa-fw me-3"></i
-            ><span>Expanded menu</span>
-        </a>
-        <!-- Collapsed content -->
-        <ul
-            id="collapseExample1"
-            class="collapse show list-group list-group-flush"
-            >
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-        </ul>
-        <!-- Collapse 1 -->
+        <svg id="hidebtn" onclick="collapseMenu()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-collapse" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z" />
+        </svg>
+        <div id="sidemenu" class="col-md-2 sm-3 text-center mx-3 my-sm-3 py-5" style="background-color: #eee; border-radius:15px">
+            <p class="text-start"><b>Categories</b></p>
+            <a href="" class="text-center">
+                Categories
+            </a>
+            <a href="" class="text-center">
+                Categories
+            </a>
+            <a href="" class="text-center">
+                Categories
+            </a>
 
-        <!-- Collapse 2 -->
-        <a
-           class="list-group-item list-group-item-action py-2 ripple"
-           aria-current="true"
-           data-mdb-toggle="collapse"
-           href="#collapseExample2"
-           aria-expanded="true"
-           aria-controls="collapseExample2"
-           >
-          <i class="fas fa-chart-area fa-fw me-3"></i
-            ><span>Collapsed menu</span>
-        </a>
-        <!-- Collapsed content -->
-        <ul
-            id="collapseExample2"
-            class="collapse list-group list-group-flush"
-            >
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-          <li class="list-group-item py-1">
-            <a href="" class="text-reset">Link</a>
-          </li>
-        </ul>
-        <!-- Collapse 2 -->
-      </div>
+            <a href="" class="text-center">
+                Categories
+            </a>
+            <a href="" class="text-center">
+                Categories
+            </a>
+            <a href="" class="text-center">
+                Categories
+            </a>
+            <p href="" class="text-start"><b>Price</b></p>
+            <input type="range">
+            <div class="row g-2">
+
+                <div class="col-sm">
+                    <center>
+                        <input type="text" class="form-control" aria-label="low" style="border-radius: 10px;">
+                    </center>
+                </div>
+                <div class="col-sm">
+                    <center>
+                        <input type="text" class="form-control" aria-label="high" style="border-radius: 10px;">
+                    </center>
+                </div>
+
+
+            </div>
+            <p class="text-start"><b>Cooking time</b></p>
+            <center>
+                <input type="range">
+                <div class="row g-2">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" aria-label="lowtime" style="border-radius: 10px;">
+                    </div>
+                    <div class="col-sm">
+                        <input type="text" class="form-control" aria-label="hightime" style="border-radius: 10px;">
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div class="col-md mx-3 my-3" style="background-color: #eee; border-radius:15px">
+            <div class="row justify-content-end">
+                <select class="form-select form-select-lg mb-3 text-end mx-2 my-2" aria-label=".form-select-lg example" style="width:25vh;">
+                    <option selected>Sort by:</option>
+                    <option value="1">Lowest Price</option>
+                    <option value="2">Most Rated</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="row">
+                    <?php
+                    for ($i = 0; $i < 6; $i++)
+                        include 'foodCard.php';
+                    ?>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
-  </nav>
-  <!-- Sidebar -->
 
-  <!-- Navbar -->
-  <nav
-       id="main-navbar"
-       class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
-       >
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
-      <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#sidebarMenu"
-              aria-controls="sidebarMenu"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              >
-        <i class="fas fa-bars"></i>
-      </button>
 
-      <!-- Brand -->
-      <a class="navbar-brand" href="#">
-        <img
-             src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-             height="25"
-             alt=""
-             loading="lazy"
-             />
-      </a>
-      <!-- Search form -->
-      <form class="d-none d-md-flex input-group w-auto my-auto">
-        <input
-               autocomplete="off"
-               type="search"
-               class="form-control rounded"
-               placeholder='Search (ctrl + "/" to focus)'
-               style="min-width: 225px"
-               />
-        <span class="input-group-text border-0"
-              ><i class="fas fa-search"></i
-          ></span>
-      </form>
-
-      <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
-        <!-- Notification dropdown -->
-        <li class="nav-item dropdown">
-          <a
-             class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-             href="#"
-             id="navbarDropdownMenuLink"
-             role="button"
-             data-mdb-toggle="dropdown"
-             aria-expanded="false"
-             >
-            <i class="fas fa-bell"></i>
-            <span class="badge rounded-pill badge-notification bg-danger"
-                  >1</span
-              >
-          </a>
-          <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdownMenuLink"
-              >
-            <li><a class="dropdown-item" href="#">Some news</a></li>
-            <li><a class="dropdown-item" href="#">Another news</a></li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
-        </li>
-
-        <!-- Icon -->
-        <li class="nav-item">
-          <a class="nav-link me-3 me-lg-0" href="#">
-            <i class="fas fa-fill-drip"></i>
-          </a>
-        </li>
-        <!-- Icon -->
-        <li class="nav-item me-3 me-lg-0">
-          <a class="nav-link" href="#">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-
-        <!-- Icon dropdown -->
-        <li class="nav-item dropdown">
-          <a
-             class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-             href="#"
-             id="navbarDropdown"
-             role="button"
-             data-mdb-toggle="dropdown"
-             aria-expanded="false"
-             >
-            <i class="united kingdom flag m-0"></i>
-          </a>
-          <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdown"
-              >
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="united kingdom flag"></i>English
-                <i class="fa fa-check text-success ms-2"></i
-                  ></a>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="poland flag"></i>Polski</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="china flag"></i>中文</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="japan flag"></i>日本語</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="germany flag"></i>Deutsch</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="france flag"></i>Français</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="spain flag"></i>Español</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="russia flag"></i>Русский</a
-                >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                 ><i class="portugal flag"></i>Português</a
-                >
-            </li>
-          </ul>
-        </li>
-
-        <!-- Avatar -->
-        <li class="nav-item dropdown">
-          <a
-             class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
-             href="#"
-             id="navbarDropdownMenuLink"
-             role="button"
-             data-mdb-toggle="dropdown"
-             aria-expanded="false"
-             >
-            <img
-                 src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
-                 class="rounded-circle"
-                 height="22"
-                 alt=""
-                 loading="lazy"
-                 />
-          </a>
-          <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdownMenuLink"
-              >
-            <li><a class="dropdown-item" href="#">My profile</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
-</header>
-<!--Main Navigation-->
-
-<!--Main layout-->
-<main style="margin-top: 58px">
-  <div class="container pt-4"></div>
-</main>
-<!--Main layout-->
-
-<?php
-include_once "footer.php";
-?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="scripts/index.js"></script>
-
-</body>
+    <?php
+    include_once "footer.php";
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+    <script>
+        function collapseMenu() {
+            var x = document.getElementById("sidemenu");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    </body>
 
 </html>

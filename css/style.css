@@ -32,7 +32,7 @@ body {
 }
 
 
-ul li {
+nav .container #navmenu ul li {
   background-color: #EEEEEE;
   width: 100px;
   border-radius: 20px;
@@ -164,3 +164,4 @@ h1 {
   font-size: 12px;
   line-height: 1.42857;
 }
+
