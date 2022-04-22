@@ -42,7 +42,7 @@
     </div>
 
     <div class="card-body">
-    <h5 class="card-title fluid">Delicious Meal</h5>
+    <h5 class="card-title fluid"><a href="#" style="font-weight:bold;">Delicious Meal</a></h5>
         <p class="card-text"></p>
     </div>
 

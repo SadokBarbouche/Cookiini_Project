@@ -159,11 +159,10 @@ include_once "header.php";
         </div>
         <div class="col-md mx-3 my-3" style="background-color: #eee; border-radius:15px">
             <div class="row justify-content-end">
-                <select class="form-select form-select-lg mb-3 text-end mx-2 my-2" aria-label=".form-select-lg example" style="width:25vh;">
+                <select class="form-select form-select-lg mb-3 text-start mx-2 my-2" aria-label=".form-select-lg example" style="width:25vh;">
                     <option selected>Sort by:</option>
                     <option value="1">Lowest Price</option>
                     <option value="2">Most Rated</option>
-                    <option value="3">Three</option>
                 </select>
                 <div class="row">
                     <?php

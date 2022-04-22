@@ -41,9 +41,9 @@
 include_once "header.php";
 ?>
 
-    <div class="container px-5 py-5 w-75" style="background-color: #eee; border-radius:15px;">
-        <p class="display-3 text-center">
-            <u>Lo</u>g in
+    <div class="container px-5 py-1 w-25" style="background-color: #eee; border-radius:15px;">
+        <p class="display-6 text-center pt-2" >
+            Log in
         </p>
         <form action="" method="" style="">
             <p class="">
@@ -61,7 +61,7 @@ include_once "header.php";
             
             <input type="email" name="email" id="" class="px-3 py-1 lg mb-5" style="width:97% ;background: #e4c6c7;display: inline-flex;border-radius: 10px;">
            <center><button class="btn rounded-pill text-center" style="background-color: #75649c; color:white">Log in</button><br>
-           <a class="text-center" href="#" style="font-size:13px">Fogot your password ?</a> 
+           <a class="text-center my-2" href="#" style="font-size:13px">Fogot your password ?</a> 
 </center>
 
     </div>

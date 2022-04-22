@@ -6,7 +6,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand mt-1" href="#">
+      <a class="navbar-brand mt-1" href="index.html">
         <img src="img/1.png" alt="..." height="50" >
       </a>
 
