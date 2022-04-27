@@ -41,7 +41,7 @@
 include_once "header.php";
 ?>
 
-    <div class="container px-5 py-1 w-25" style="background-color: #eee; border-radius:15px;">
+    <div class="container px-5 py-1 col-sm-5 col-md-5" style="background-color: #FFF9F0; border-radius:15px;">
         <p class="display-6 text-center pt-2" >
             Log in
         </p>

@@ -1,14 +1,15 @@
 <?php>
 <div class="col-md-4 my-3">
-<div class="card">
+<div class="card position-relative">
     <div class="containerImg">
     <img src="img/Rectangle 42.png" class="image card-img-top img-fluid py-3 px-3">
+
     <div class="middle">
     <div class="text">
         <table >
         <tr>
             <td>
-            <img src="img/Mask group.png"  class="img-fluid">
+            <img src="img/Mask group.png" class="img-fluid">
             </td>
             <td class="text-start px-1"  >
             <b>20 min</b>
@@ -42,7 +43,8 @@
     </div>
 
     <div class="card-body">
-    <h5 class="card-title fluid"><a href="#" style="font-weight:bold;">Delicious Meal</a></h5>
+    <h5 class="card-title fluid" style="display:inline-block;"><a href="#" style="font-weight:bold;">Delicious Meal</a></h5>
+        <p class="text text-end" style="text-align:match-parent;display:inline;">10TD</p>
         <p class="card-text"></p>
     </div>
 

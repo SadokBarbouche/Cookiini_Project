@@ -21,16 +21,22 @@
 include_once "header.php";
 ?>
 
-<div class="container px-5 py-2 w-75" style="background-color: #eee; border-radius:15px;">
-    <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+<div class="container px-5 py-2 w-75 mb-3" style="background-color: #FFF9F0; border-radius:15px;">
+    <a href="createYourArticle.php" style="text-decoration: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
         </svg>
-    </span>
+    </a>
+    
     <?php
-        include_once 'Articles\ArticleTemplate.php';
+        for ($i=0;$i<4;$i++){
+            include 'Articles\ArticleTemplate.php';
+        }
     ?>
 </div>
+<?php
+    include_once 'footer.php';
+?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="scripts/index.js"></script>
 </body>

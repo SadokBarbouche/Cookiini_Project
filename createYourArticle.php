@@ -21,13 +21,13 @@
 include_once "header.php";
 ?>
 
-<div class="container px-5 py-2 w-100" style="background-color: #eee; border-radius:15px;">
+<div class="container px-5 py-2 w-100" style="background-color: #FFF9F0; border-radius:15px;">
     <h1 class="h1 mb-5" style="color:#533e85;">Create your article</h1>
     <form action="" method="" style="">
             <p class="">
                 Title
             </p>
-            <input type="text"  name="title" id="" class="px-3 py-2" style=" width:60%;background: #e4c6c7;
+            <input type="text"  name="title" id="" class="px-3 py-2" style=" width:60%;background-color:rgb(1, 146, 103,0.2);
             display: inline-flex;
             border-radius: 10px;
             
@@ -37,15 +37,15 @@ include_once "header.php";
                 Description 
             </p>
             
-            <input type="text" name="email" id="" class="px-3 py-2 lg mb-4" style="width:97% ;background: #e4c6c7;display: inline-flex;border-radius: 10px;">
+            <input type="text" name="description" id="" class="px-3 py-2 lg mb-4" style="width:97% ;background-color:rgb(1, 146, 103,0.2);display: inline-flex;border-radius: 10px;">
            
             <p class="">
                 Content 
             </p>
-           <textarea class="form-control" name="" id="" rows="10" style=" width:97%;background: #e4c6c7;display: inline-flex;border-radius: 10px;resize:none;border-color:black;
+           <textarea class="form-control" name="" id="" rows="10" style=" width:97%;background-color:rgb(1, 146, 103,0.2);display: inline-flex;border-radius: 10px;resize:none;border-color:black;
             "></textarea>
            
-            <center><button class="btn rounded-pill text-center mt-3" style="background-color: #75649c; color:white">Submit</button><br>
+            <center><button class="btn rounded-pill text-center mt-3 px-4" style="background-color: #019267; color:white">Submit</button><br>
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
