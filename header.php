@@ -1,6 +1,6 @@
 <?php ?>
 
-<body style="background-color:rgb(254, 243, 164,0.5)">
+<body style="background-color:rgb(255, 129, 101)">
   
   <nav class="navbar navbar-expand-lg bg-transparent navbar-light animate glow delay-2 mb-5 pb-5" >
     <div class="container">
@@ -41,7 +41,7 @@
           <li class="nav-item mx-1 mt-1"><a href="" class="rounded-pill text fs-6">
               Sign in
             </a></li>
-          <li class="nav-item mx-1 mt-1 text fs-6" style="background-color: #019267;"><a href="login.php" class="rounded-pill text fs-6" style="color:white;">
+          <li class="nav-item mx-1 mt-1 text fs-6" style="background-color: #000;"><a href="login.php" class="rounded-pill text fs-6" style="color:white;">
               Log in
             </a></li>
 
@@ -49,4 +49,5 @@
       </div>
     </div>
   </nav>
+
   <?php ?>
